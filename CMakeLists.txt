@@ -69,3 +69,6 @@ install(
   DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/fg
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
+
+install(TARGETS FrameGraph EXPORT frame_graph_config)
+install(EXPORT frame_graph_config NAMESPACE frame-graph:: DESTINATION share/frame-graph/cmake)
